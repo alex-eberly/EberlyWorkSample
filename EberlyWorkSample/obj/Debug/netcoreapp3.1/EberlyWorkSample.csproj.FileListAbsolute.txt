@@ -1,0 +1,13 @@
+C:\Users\aeberly\source\repos\EberlyWorkSample\EberlyWorkSample\bin\Debug\netcoreapp3.1\EberlyWorkSample.exe
+C:\Users\aeberly\source\repos\EberlyWorkSample\EberlyWorkSample\bin\Debug\netcoreapp3.1\EberlyWorkSample.deps.json
+C:\Users\aeberly\source\repos\EberlyWorkSample\EberlyWorkSample\bin\Debug\netcoreapp3.1\EberlyWorkSample.runtimeconfig.json
+C:\Users\aeberly\source\repos\EberlyWorkSample\EberlyWorkSample\bin\Debug\netcoreapp3.1\EberlyWorkSample.runtimeconfig.dev.json
+C:\Users\aeberly\source\repos\EberlyWorkSample\EberlyWorkSample\bin\Debug\netcoreapp3.1\EberlyWorkSample.dll
+C:\Users\aeberly\source\repos\EberlyWorkSample\EberlyWorkSample\bin\Debug\netcoreapp3.1\EberlyWorkSample.pdb
+C:\Users\aeberly\source\repos\EberlyWorkSample\EberlyWorkSample\obj\Debug\netcoreapp3.1\EberlyWorkSample.AssemblyInfoInputs.cache
+C:\Users\aeberly\source\repos\EberlyWorkSample\EberlyWorkSample\obj\Debug\netcoreapp3.1\EberlyWorkSample.AssemblyInfo.cs
+C:\Users\aeberly\source\repos\EberlyWorkSample\EberlyWorkSample\obj\Debug\netcoreapp3.1\EberlyWorkSample.dll
+C:\Users\aeberly\source\repos\EberlyWorkSample\EberlyWorkSample\obj\Debug\netcoreapp3.1\EberlyWorkSample.pdb
+C:\Users\aeberly\source\repos\EberlyWorkSample\EberlyWorkSample\obj\Debug\netcoreapp3.1\EberlyWorkSample.genruntimeconfig.cache
+C:\Users\aeberly\source\repos\EberlyWorkSample\EberlyWorkSample\obj\Debug\netcoreapp3.1\EberlyWorkSample.csproj.CoreCompileInputs.cache
+C:\Users\aeberly\source\repos\EberlyWorkSample\EberlyWorkSample\obj\Debug\netcoreapp3.1\EberlyWorkSample.csprojAssemblyReference.cache
