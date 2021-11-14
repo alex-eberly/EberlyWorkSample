@@ -14,10 +14,10 @@ This command line application stores and handles data manipulation for a multi-v
 * ALLMEMBERS: Prints out a list of all members in the dictionary without the names of the keys
 * ITEMS: Prints out a list of all key-value pairs in the dictionary
 * MULTIADD KeyName ValueName1 ValueName2: Adds the key if it does not exist, and adds the members to the key
-* MULTIREMOVE KeyName ValueName1 ValueName2: Removes the members from the key, and removes the key if no values are left");
+* MULTIREMOVE KeyName ValueName1 ValueName2: Removes the members from the key, and removes the key if no values are left
 * MULTIREMOVEALL KeyName1 KeyName2: Removes all members from the specified keys and deletes the keys
-* HELP: Get a list of available commands to use
-* QUIT: Quit the application
+* HELP: Gets a list of available commands to use
+* QUIT: Quits the application
 
 Within the repository, you will find a solution with two projects that contain the following files:
 * EberlyWorkSample -- This project contains the command line application
