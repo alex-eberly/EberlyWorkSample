@@ -153,7 +153,7 @@ namespace EberlyWorkSample
         private static void MultiRemoveAll(string input, Dictionary<string, List<string>> dictionary)
         {
             var strArr = input.Split(' ');
-            if (strArr.Length < 3)
+            if (strArr.Length < 2)
             {
                 Program.ThrowError("Please enter the key(s) to remove after the command i.e. \"MULTIREMOVEALL foo bang\"");
                 return;
