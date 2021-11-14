@@ -159,7 +159,7 @@ namespace EberlyWorkSample
                 return;
             }
 
-            var keys = strArr.Skip(1);
+            var keys = strArr.Skip(1).ToList();
             var removedKeys = new List<string>();
             var errorKeys = new List<string>();
 
