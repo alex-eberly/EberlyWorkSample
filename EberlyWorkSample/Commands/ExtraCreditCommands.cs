@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -12,8 +12,8 @@ namespace EberlyWorkSample
         /// <summary>
         /// Parse input and execute extra credit command
         /// </summary>
-        /// <param name="input"></param>
-        /// <param name="dictionary"></param>
+        /// <param name="input">User input</param>
+        /// <param name="dictionary">Dictionary to update or read from</param>
         public static void ReadExtraCreditCommand(string input, Dictionary<string, List<string>> dictionary)
         {
             switch (input.Split(' ')[0])
@@ -39,7 +39,7 @@ namespace EberlyWorkSample
         /// Add new key to dictionary if not already present; add one or more values to key if not already present
         /// </summary>
         /// <param name="input">User input (i.e. MULTIADD foo bar baz)</param>
-        /// <param name="dictionary">Previous dictionary</param>
+        /// <param name="dictionary">Dictionary to add to</param>
         private static void MultiAdd(string input, Dictionary<string, List<string>> dictionary)
         {
             var strArr = input.Split(' ');
@@ -90,7 +90,7 @@ namespace EberlyWorkSample
         /// Removes one or more values from key; removes key if no values are left
         /// </summary>
         /// <param name="input">User input (i.e. MULTIREMOVE foo bar baz)</param>
-        /// <param name="dictionary">Previous dictionary</param>
+        /// <param name="dictionary">Dictionary to remove from</param>
         private static void MultiRemove(string input, Dictionary<string, List<string>> dictionary)
         {
             var strArr = input.Split(' ');
@@ -149,7 +149,7 @@ namespace EberlyWorkSample
         /// Removes all values from one or more keys and deletes the key(s)
         /// </summary>
         /// <param name="input">User input (i.e. MULTIREMOVEALL foo bang)</param>
-        /// <param name="dictionary">Previous dictionary</param>
+        /// <param name="dictionary">Dictionary to remove from</param>
         private static void MultiRemoveAll(string input, Dictionary<string, List<string>> dictionary)
         {
             var strArr = input.Split(' ');
@@ -203,7 +203,7 @@ namespace EberlyWorkSample
             Console.WriteLine("REMOVEALL KeyName: Removes all members from the specified key and deletes the key");
             Console.WriteLine("CLEAR: Removes all keys and members from the dictionary");
             Console.WriteLine("KEYEXISTS KeyName: Prints True if the key exists in the dictionary, False if it does not");
-            Console.WriteLine("MEMBEREXISTS KeyName MemberName: Prints true if the specified member exists for the key, False if the key or member do not exist");
+            Console.WriteLine("MEMBEREXISTS KeyName MemberName: Prints True if the specified member exists for the key, False if the key or member do not exist");
             Console.WriteLine("ALLMEMBERS: Prints out a list of all members in the dictionary without the names of the keys");
             Console.WriteLine("ITEMS: Prints out a list of all key-value pairs in the dictionary");
             Console.WriteLine("MULTIADD KeyName ValueName1 ValueName2: Adds the key if it does not exist, and adds the members to the key");
