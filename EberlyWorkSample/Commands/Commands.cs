@@ -1,6 +1,7 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.RegularExpressions;
 
 namespace EberlyWorkSample
 {
@@ -10,10 +11,10 @@ namespace EberlyWorkSample
         /// Parse input and execute command
         /// </summary>
         /// <param name="input">User input</param>
-        /// <param name="dictionary">Dictionary of key and values</param>
+        /// <param name="dictionary">Dictionary to update or read from</param>
         public static void ReadCommand(string input, Dictionary<string, List<string>> dictionary, bool shouldContinue = true)
         {
-            input = input?.Trim().ToLower() ?? "";
+            input = Regex.Replace((input?.Trim().ToLower() ?? ""), @"\s+", " ");
             dictionary = dictionary ?? new Dictionary<string, List<string>>();
 
             try
@@ -80,7 +81,7 @@ namespace EberlyWorkSample
         /// <summary>
         /// Print out all keys in dictionary
         /// </summary>
-        /// <param name="dictionary">Current dictionary</param>
+        /// <param name="dictionary">Dictionary to read from</param>
         private static void Keys(Dictionary<string, List<string>> dictionary)
         {
             var ind = 1;
@@ -94,7 +95,7 @@ namespace EberlyWorkSample
         /// Print out all members for a given key
         /// </summary>
         /// <param name="input">User input (i.e. MEMBERS foo)</param>
-        /// <param name="dictionary">Current dictionary</param>
+        /// <param name="dictionary">Dictionary to read from</param>
         private static void Members(string input, Dictionary<string, List<string>> dictionary)
         {
             var strArr = input.Split(' ');
@@ -124,7 +125,7 @@ namespace EberlyWorkSample
         /// Add new key to dictionary if not already present; add value to key if not already present
         /// </summary>
         /// <param name="input">User input (i.e. ADD foo bar)</param>
-        /// <param name="dictionary">Previous dictionary</param>
+        /// <param name="dictionary">Dictionary to add to</param>
         private static void Add(string input, Dictionary<string, List<string>> dictionary)
         {
             var strArr = input.Split(' ');
@@ -163,7 +164,7 @@ namespace EberlyWorkSample
         /// Remove a value from a key; remove the key if no values are left
         /// </summary>
         /// <param name="input">User input (i.e. REMOVE foo bar)</param>
-        /// <param name="dictionary">Previous dictionary</param>
+        /// <param name="dictionary">Dictionary to remove from</param>
         private static void Remove(string input, Dictionary<string, List<string>> dictionary)
         {
             var strArr = input.Split(' ');
@@ -202,7 +203,7 @@ namespace EberlyWorkSample
         /// Removes all values from a key and deletes the key
         /// </summary>
         /// <param name="input">User input (i.e. REMOVEALL foo)</param>
-        /// <param name="dictionary">Previous dictionary</param>
+        /// <param name="dictionary">Dictionary to remove from</param>
         private static void RemoveAll(string input, Dictionary<string, List<string>> dictionary)
         {
             var strArr = input.Split(' ');
@@ -228,7 +229,7 @@ namespace EberlyWorkSample
         /// <summary>
         /// Clears entire dictionary
         /// </summary>
-        /// <returns>Updated dictionary</returns>
+        /// <param name="dictionary">Dictionary to clear</param>
         private static void Clear(Dictionary<string, List<string>> dictionary)
         {
             dictionary.Clear();
@@ -240,7 +241,7 @@ namespace EberlyWorkSample
         /// Prints out whether a key exists or not
         /// </summary>
         /// <param name="input">User input (i.e. KEYEXISTS foo)</param>
-        /// <param name="dictionary">Current dictionary</param>
+        /// <param name="dictionary">Dictionary to read from</param>
         private static void KeyExists(string input, Dictionary<string, List<string>> dictionary)
         {
             var strArr = input.Split(' ');
@@ -258,7 +259,7 @@ namespace EberlyWorkSample
         /// Prints out whether a value exists on a key (returns false if key does not exist) 
         /// </summary>
         /// <param name="input">User input (i.e. MEMBEREXISTS foo bar)</param>
-        /// <param name="dictionary">Current dictionary</param>
+        /// <param name="dictionary">Dictionary to read from</param>
         private static void MemberExists(string input, Dictionary<string, List<string>> dictionary)
         {
             var strArr = input.Split(' ');
@@ -275,7 +276,7 @@ namespace EberlyWorkSample
         /// <summary>
         /// Returns all values in the dictionary
         /// </summary>
-        /// <param name="dictionary">Current dictionary</param>
+        /// <param name="dictionary">Dictionary to read from</param>
         private static void AllMembers(Dictionary<string, List<string>> dictionary)
         {
             var ind = 1;
@@ -288,7 +289,7 @@ namespace EberlyWorkSample
         /// <summary>
         /// Returns all values for all keys in the dictionary with the name of the key
         /// </summary>
-        /// <param name="dictionary">Current dictionary</param>
+        /// <param name="dictionary">Dictionary to read from</param>
         private static void Items(Dictionary<string, List<string>> dictionary)
         {
             var ind = 1;
